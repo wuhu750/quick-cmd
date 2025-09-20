@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+const { spawn } = require('child_process');
+
+const args = process.argv.slice(2);
+
+let command = '{{command}}';
+
+args.forEach(arg => {
+    command = command.replace('{{arg}}', arg);
+})
+
+console.log("🚀 quick-cmd ~ full command: ", command);
+
+const child = spawn(command, args, {
+    stdio: 'inherit',
+    shell: true
+});
+
+child.on('close', (code) => {
+    process.exit(code);
+});

@@ -1,0 +1,36 @@
+{
+  "name": "quick-cmd",
+  "version": "1.0.0",
+  "description": "A lightweight command-line tool for creating shortcut command aliases to improve development efficiency. Simplify commonly used long commands into short aliases for quick execution of various development-related operations.",
+  "main": "index.js",
+  "bin": {
+    "quickcmd": "bin/index.js",
+    "qcmd": "bin/index.js"
+  },
+  "keywords": [
+    "command-line",
+    "cli",
+    "alias",
+    "shortcuts",
+    "productivity",
+    "developer-tools",
+    "shell",
+    "cmd",
+    "bash",
+    "quick"
+  ],
+  "author": "wuhu750",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wuhu750/quick-cmd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wuhu750/quick-cmd/issues"
+  },
+  "homepage": "https://github.com/wuhu750/quick-cmd#readme"
+}
