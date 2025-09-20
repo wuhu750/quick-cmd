@@ -30,7 +30,7 @@ npm install -g quick-cmd
 yarn global add quick-cmd
 ```
 
-安装后可以使用 `quickcmd` 或 `qcmd` 命令。
+安装后可以使用 `qcmd` 命令。
 
 ## 命令说明
 
@@ -61,8 +61,8 @@ yarn global add quick-cmd
 
 使用示例：
 ```bash
-quickcmd install                 # 安装默认命令
-quickcmd i ./my-commands.json   # 从指定文件安装命令
+qcmd install                 # 安装默认命令
+qcmd i ./my-commands.json   # 从指定文件安装命令
 ```
 
 默认命令 见：[默认命令](#默认命令)

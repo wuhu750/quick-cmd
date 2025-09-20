@@ -1,4 +1,4 @@
-# quick-cmd
+# quick-cmd (qcmd)
 
 [中文版本](./README.md)
 
@@ -30,7 +30,7 @@ Or using yarn:
 yarn global add quick-cmd
 ```
 
-After installation, you can use the `quickcmd` or `qcmd` commands.
+After installation, you can use the `qcmd` commands.
 
 ## Command Description
 
@@ -61,8 +61,8 @@ Example configuration file:
 
 Usage examples:
 ```bash
-quickcmd install                 # Install default commands
-quickcmd i ./my-commands.json   # Install commands from specified file
+qcmd install                 # Install default commands
+qcmd i ./my-commands.json   # Install commands from specified file
 ```
 
 Default commands see: [Default Commands](#default-commands)

@@ -1,5 +1,5 @@
 {
-  "name": "quick-cmd",
+  "name": "qcmd",
   "version": "1.0.0",
   "description": "A lightweight command-line tool for creating shortcut command aliases to improve development efficiency. Simplify commonly used long commands into short aliases for quick execution of various development-related operations.",
   "main": "index.js",
@@ -17,7 +17,9 @@
     "shell",
     "cmd",
     "bash",
-    "quick"
+    "quick",
+    "quick-cmd",
+    "quick cmd"
   ],
   "author": "wuhu750",
   "license": "ISC",
