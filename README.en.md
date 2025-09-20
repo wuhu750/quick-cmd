@@ -1,4 +1,4 @@
-# quick-cmd (qcmd)
+# quick-command
 
 [中文版本](./README.md)
 
@@ -6,7 +6,7 @@ A lightweight command-line tool for creating shortcut command aliases to improve
 
 ## Project Introduction
 
-quick-cmd is a command-line tool that allows users to create short aliases for frequently used commands. It is particularly suitable for complex commands that need to be executed frequently, such as those in Node.js, NPM, Git and other toolchains. With quick-cmd, you can simplify `git commit -m "message"` to `gc "message"`, or `npm install -g @vue/cli` to `nig @vue/cli`.
+quick-command is a command-line tool that allows users to create short aliases for frequently used commands. It is particularly suitable for complex commands that need to be executed frequently, such as those in Node.js, NPM, Git and other toolchains. With quick-cmd, you can simplify `git commit -m "message"` to `gc "message"`, or `npm install -g @vue/cli` to `nig @vue/cli`.
 
 The tool creates a `.quick-cmd` directory in the user's home directory to store configurations and command aliases, and supports importing/exporting configurations.
 

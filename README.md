@@ -1,4 +1,4 @@
-# quick-cmd
+# quick-command
 
 [English Version](./README.en.md)
 
@@ -6,7 +6,7 @@
 
 ## 项目介绍
 
-quick-cmd 是一个命令行工具，允许用户为常用命令创建简短别名。它特别适用于需要频繁执行的复杂命令，如 Node.js、NPM、Git 等工具链中的命令。通过使用 quick-cmd，您可以将 `git commit -m "message"` 简化为 `gc "message"`，或将 `npm install -g @vue/cli` 简化为 `nig @vue/cli`。
+quick-command 是一个命令行工具，允许用户为常用命令创建简短别名。它特别适用于需要频繁执行的复杂命令，如 Node.js、NPM、Git 等工具链中的命令。通过使用 quick-cmd，您可以将 `git commit -m "message"` 简化为 `gc "message"`，或将 `npm install -g @vue/cli` 简化为 `nig @vue/cli`。
 
 该工具会在用户主目录下创建 `.quick-cmd` 目录来存储配置和命令别名，并支持导入/导出配置。
 
