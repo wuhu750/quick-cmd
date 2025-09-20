@@ -16,7 +16,6 @@ The tool creates a `.quick-cmd` directory in the user's home directory to store 
 2. **Easy to Use**: Provides an intuitive command-line interface that is simple to learn
 3. **Flexible Configuration**: Supports adding, deleting, viewing and managing command aliases
 4. **Persistent Storage**: Configurations are saved in the user's home directory for cross-session use
-5. **Out of the Box**: Built-in common Node.js, NPM, Git, Yarn command aliases
 
 ## Installation
 
@@ -125,6 +124,22 @@ Usage examples:
 qcmd export ./my-commands.json    # Export commands to specified file
 qcmd e ./backup.json              # Export commands to backup file
 ```
+
+## Adding to PATH (Important)
+
+After installing commands with `qcmd i`, you need to add the command directory to your system's PATH environment variable to use the shortcuts directly from the terminal.
+
+### For macOS and Linux users:
+
+Add the following line to your shell configuration file (`~/.bashrc`, `~/.zshrc`, etc.):
+
+```bash
+export PATH="$HOME/.quick-cmd/bin:$PATH"
+```
+
+Then reload your shell configuration:
+```bash
+source ~/.bashrc   # or source ~/.zshrc
 
 ### Default Commands
 

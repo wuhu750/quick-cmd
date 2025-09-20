@@ -16,7 +16,6 @@ quick-command 是一个命令行工具，允许用户为常用命令创建简短
 2. **易于使用**：提供直观的命令行界面，简单易学
 3. **灵活配置**：支持添加、删除、查看和管理命令别名
 4. **持久化存储**：配置保存在用户主目录中，跨会话使用
-5. **开箱即用**：内置常用的 Node.js、NPM、Git、Yarn 命令别名
 
 ## 安装
 
@@ -125,6 +124,23 @@ qcmd p nr           # 查看 nr 命令
 ```bash
 qcmd export ./my-commands.json    # 导出命令到指定文件
 qcmd e ./backup.json             # 导出命令到备份文件
+```
+
+## 添加到 PATH（重要）
+
+使用 `qcmd i` 安装命令后，您需要将命令目录添加到系统的 PATH 环境变量中，才能直接在终端中使用这些快捷命令。
+
+### macOS 和 Linux 用户：
+
+将以下行添加到您的 shell 配置文件（`~/.bashrc`、`~/.zshrc` 等）中：
+
+```bash
+export PATH="$HOME/.quick-cmd/bin:$PATH"
+```
+
+然后重新加载您的 shell 配置：
+```bash
+source ~/.bashrc   # 或 source ~/.zshrc
 ```
 
 ### 默认命令
