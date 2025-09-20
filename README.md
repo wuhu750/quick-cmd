@@ -21,13 +21,13 @@ quick-cmd 是一个命令行工具，允许用户为常用命令创建简短别�
 ## 安装
 
 ```bash
-npm install -g quick-cmd
+npm install -g npm i quick-command
 ```
 
 或者使用 yarn：
 
 ```bash
-yarn global add quick-cmd
+yarn global add npm i quick-command
 ```
 
 安装后可以使用 `qcmd` 命令。

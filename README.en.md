@@ -21,13 +21,13 @@ The tool creates a `.quick-cmd` directory in the user's home directory to store 
 ## Installation
 
 ```bash
-npm install -g quick-cmd
+npm install -g quick-command
 ```
 
 Or using yarn:
 
 ```bash
-yarn global add quick-cmd
+yarn global add quick-command
 ```
 
 After installation, you can use the `qcmd` commands.
