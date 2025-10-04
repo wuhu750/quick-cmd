@@ -3,15 +3,20 @@ const { spawn } = require('child_process');
 
 const args = process.argv.slice(2);
 
-let command = '{{command}}';
+let command = "{{command}}";
+const argTemplate = '{{arg}}';
 
 args.forEach(arg => {
-    command = command.replace('{{arg}}', arg);
+    if (command.includes(argTemplate)) {
+        command = command.replace(argTemplate, arg);
+    } else {
+        command += (" " + arg);
+    }
 })
 
 console.log("🚀 quick-cmd ~ full command: ", command);
 
-const child = spawn(command, args, {
+const child = spawn(command, {
     stdio: 'inherit',
     shell: true
 });

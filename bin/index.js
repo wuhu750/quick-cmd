@@ -38,6 +38,8 @@ program
     .command('delete')
     .description('delete command or commands')
     .alias('d')
+    .alias('r')
+    .alias('remove')
     .argument('[alias]', 'command alias')
     .action((alias) => {
         unInstall(alias);
@@ -47,6 +49,7 @@ program
     .command('list')
     .description('list all commands')
     .alias('l')
+    .alias('ls')
     .action(() => {
         listCommands();
     })

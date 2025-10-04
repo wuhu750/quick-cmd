@@ -37,8 +37,8 @@ yarn global add quick-command
 |------|------|------|
 | install | i | 从 JSON 文件安装命令 |
 | add | a | 添加新命令 |
-| delete | d | 删除命令 |
-| list | l | 列出所有命令 |
+| delete | `d` or `r` or `remove`| 删除命令 |
+| list | `l` or `list` | 列出所有命令 |
 | preview | p | 预览命令信息 |
 | export | e | 导出命令到 JSON 文件 |
 
@@ -149,45 +149,20 @@ source ~/.bashrc   # 或 source ~/.zshrc
 ```json
 {
     "nv": "node -v",
-    "n": "node",
+
     "ni": "npm i",
     "nr": "npm run {{arg}}",
-    "nls": "npm ls",
-    "nun": "npm uninstall {{arg}}",
-    "ns": "npm start",
-    "nt": "npm test",
 
     "gs": "git status",
-    "ga": "git add {{arg}}",
-    "gaa": "git add .",
-    "gc": "git commit -m \"{{arg}}\"",
-    "gca": "git commit --amend",
-    "gp": "git push",
-    "gpf": "git push --force",
-    "gpu": "git push -u origin {{arg}}",
+    "gadd": "git add {{arg}}",
+    "gp": "git push origin HEAD",
     "gl": "git pull",
-    "gco": "git checkout {{arg}}",
-    "gcob": "git checkout -b {{arg}}",
-    "gb": "git branch",
-    "gba": "git branch -a",
-    "gbd": "git branch -d {{arg}}",
-    "gm": "git merge {{arg}}",
-    "gd": "git diff",
-    "gds": "git diff --staged",
-    "grs": "git reset",
-    "grh": "git reset --hard",
-    "gcl": "git clone {{arg}}",
-    "glog": "git log --oneline",
-    "gsh": "git show",
-
+    "gi": "git init",
+    "ggc": "git commit -m '{{arg}}'",
+    
     "yi": "yarn install",
     "ya": "yarn add {{arg}}",
-    "yad": "yarn add -D {{arg}}",
-    "yag": "yarn global add {{arg}}",
-    "yr": "yarn run {{arg}}",
-    "yt": "yarn test",
-    "yrm": "yarn remove {{arg}}",
-    "yup": "yarn upgrade {{arg}}",
-    "yls": "yarn list --depth=0"
+    "y": "yarn",
+    "yr": "yarn {{arg}}"
 }
 ```

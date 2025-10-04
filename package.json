@@ -24,8 +24,8 @@
   "author": "wuhu750",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^4.1.2",
-    "commander": "^11.1.0"
+    "chalk": "4.1.2",
+    "commander": "8.3.0"
   },
   "repository": {
     "type": "git",
