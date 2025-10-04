@@ -140,6 +140,7 @@ export PATH="$HOME/.quick-cmd/bin:$PATH"
 Then reload your shell configuration:
 ```bash
 source ~/.bashrc   # or source ~/.zshrc
+```
 
 ### Default Commands
 
@@ -156,7 +157,7 @@ If default commands are installed, the tool will create the following commands:
 
     "ggs": "git status",
     "gadd": "git add {{arg}}",
-    "ggp": "git push origin HEAD",
+    "gpush": "git push origin HEAD",
     "ggl": "git pull",
     "ggi": "git init",
     "ggc": "git commit -m '{{arg}}'",

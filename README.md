@@ -157,7 +157,7 @@ source ~/.bashrc   # 或 source ~/.zshrc
 
     "ggs": "git status",
     "gadd": "git add {{arg}}",
-    "ggp": "git push origin HEAD",
+    "gpush": "git push origin HEAD",
     "ggl": "git pull",
     "ggi": "git init",
     "ggc": "git commit -m '{{arg}}'",
