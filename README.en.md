@@ -149,14 +149,16 @@ If default commands are installed, the tool will create the following commands:
 {
     "nv": "node -v",
 
+    "c": "clear",
+
     "ni": "npm i",
     "nr": "npm run {{arg}}",
 
-    "gs": "git status",
+    "ggs": "git status",
     "gadd": "git add {{arg}}",
-    "gp": "git push origin HEAD",
-    "gl": "git pull",
-    "gi": "git init",
+    "ggp": "git push origin HEAD",
+    "ggl": "git pull",
+    "ggi": "git init",
     "ggc": "git commit -m '{{arg}}'",
     
     "yi": "yarn install",
