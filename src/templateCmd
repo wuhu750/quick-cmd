@@ -2,17 +2,47 @@
 const { spawn } = require('child_process');
 
 const args = process.argv.slice(2);
-
 let command = "{{command}}";
-const argTemplate = '{{arg}}';
 
-args.forEach(arg => {
-    if (command.includes(argTemplate)) {
-        command = command.replace(argTemplate, arg);
-    } else {
-        command += (" " + arg);
+const argRE = /\{\{arg(\d*)\}\}/g;
+const envRE = /\{\{env:(\w+)\}\}/g;
+const patterns = [
+    { re: /\{\{cwd\}\}/g, val: process.cwd() },
+    { re: /\{\{date\}\}/g, val: new Date().toISOString().split('T')[0] },
+    { re: /\{\{time\}\}/g, val: new Date().toISOString().split('T')[1].replace('Z', '') },
+    { re: /\{\{alias\}\}/g, val: process.argv[1] },
+    { re: /\{\{\*args\}\}/g, val: args.map(a => quoteArg(a)).join(' ') },
+];
+
+function quoteArg(arg) {
+    if (arg.includes(' ') || arg.includes('"') || arg.includes("'")) {
+        return `"${arg.replace(/"/g, '\\"')}"`;
     }
-})
+    return arg;
+}
+
+// Replace environment variables
+command = command.replace(envRE, (_, name) => process.env[name] || `{{env:${name}}}`);
+
+// Replace {{arg}} with first arg, {{arg1}}, {{arg2}} etc
+command = command.replace(argRE, (_, num) => {
+    if (!num) return quoteArg(args[0] || '{{arg}}');
+    const idx = parseInt(num, 10) - 1;
+    return quoteArg(args[idx] || `{{arg${num}}}`);
+});
+
+// Replace special placeholders
+for (const { re, val } of patterns) {
+    command = command.replace(re, val);
+}
+
+// Append remaining args (not consumed by placeholders)
+const consumed = new Set();
+command.replace(argRE, (m) => consumed.add(m));
+const remaining = args.filter(a => !consumed.has(a));
+if (remaining.length > 0) {
+    command += ' ' + remaining.map(a => quoteArg(a)).join(' ') + '';
+}
 
 console.log("🚀 quick-cmd ~ full command: ", command);
 

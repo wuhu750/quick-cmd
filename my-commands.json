@@ -1,0 +1,7 @@
+{
+    "gs": "git status",
+    "gc": "git commit -m '{{arg}}'",
+    "ni": "npm i",
+    "nr": "npm run {{arg}}",
+    "cdmine": "cd ~/mine"
+}
