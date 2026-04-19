@@ -215,7 +215,6 @@ class AliasManager {
         }
 
         await this.configManager.save(currentConfig);
-        await this.configManager.saveToSource(currentConfig);
 
         if (toAdd.length > 0) {
             logger.success(`Added ${toAdd.length} aliases: ${toAdd.map(a => a[0]).join(', ')}`);
